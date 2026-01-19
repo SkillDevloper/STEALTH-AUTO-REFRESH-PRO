@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stealth Auto Refresh Pro</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-user-secret"></i> Stealth Auto Refresh</h1>
+            <p class="subtitle">100% Undetectable Human-like Refreshing</p>
+        </header>
+        
+        <div class="settings-section">
+            <h2><i class="fas fa-sliders-h"></i> Timer Settings</h2>
+            
+            <div class="input-group">
+                <label for="minTime">
+                    <i class="fas fa-hourglass-start"></i> Minimum Time (seconds)
+                </label>
+                <input type="number" id="minTime" min="10" max="3600" value="30">
+                <div class="range-value" id="minValue">30s</div>
+            </div>
+            
+            <div class="input-group">
+                <label for="maxTime">
+                    <i class="fas fa-hourglass-end"></i> Maximum Time (seconds)
+                </label>
+                <input type="number" id="maxTime" min="30" max="7200" value="120">
+                <div class="range-value" id="maxValue">120s</div>
+            </div>
+            
+            <div class="input-group">
+                <label for="targetUrl">
+                    <i class="fas fa-link"></i> Target URL (optional)
+                </label>
+                <input type="text" id="targetUrl" placeholder="Leave empty for current tab">
+                <small class="hint">Only refresh pages matching this URL</small>
+            </div>
+        </div>
+        
+        <div class="settings-section">
+            <h2><i class="fas fa-user-secret"></i> Stealth Settings</h2>
+            
+            <div class="input-group">
+                <label>
+                    <i class="fas fa-ghost"></i> Stealth Mode
+                </label>
+                <div class="toggle-group">
+                    <button id="stealthToggle" class="toggle-btn active">
+                        <i class="fas fa-user-secret"></i> STEALTH ON
+                    </button>
+                    <div class="tooltip">
+                        <i class="fas fa-info-circle"></i>
+                        <span class="tooltip-text">Simulates human behavior to avoid detection</span>
+                    </div>
+                </div>
+                <small class="hint">Makes refreshes look 100% human</small>
+            </div>
+            
+            <div class="input-group">
+                <label for="behaviorPattern">
+                    <i class="fas fa-user-tag"></i> User Behavior
+                </label>
+                <select id="behaviorPattern" class="pattern-select">
+                    <option value="normal">👤 Normal User</option>
+                    <option value="patient">🧘 Patient User</option>
+                    <option value="impatient">⚡ Impatient User</option>
+                    <option value="random">🎲 Random User</option>
+                </select>
+                <small class="hint">Different timing patterns to mimic real users</small>
+            </div>
+            
+            <div class="stealth-info">
+                <p><i class="fas fa-check-circle"></i> <strong>Undetectable:</strong> Websites cannot distinguish from real human</p>
+                <p><i class="fas fa-mouse-pointer"></i> <strong>Human Simulation:</strong> Random mouse movements & scrolling</p>
+                <p><i class="fas fa-brain"></i> <strong>Smart Timing:</strong> Natural patterns, not just random</p>
+            </div>
+        </div>
+        
+        <div class="settings-section">
+            <h2><i class="fas fa-eye"></i> Display Settings</h2>
+            
+            <div class="input-group">
+                <label>
+                    <i class="fas fa-stopwatch"></i> Timer Display
+                </label>
+                <div class="toggle-group">
+                    <button id="displayToggle" class="toggle-btn active">
+                        <i class="fas fa-eye"></i> SHOW TIMER
+                    </button>
+                    <button id="positionBtn" class="position-btn">
+                        <i class="fas fa-arrows-alt"></i> POSITION
+                    </button>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label>
+                    <i class="fas fa-paint-brush"></i> Timer Theme
+                </label>
+                <div class="theme-buttons">
+                    <button class="theme-btn active" data-theme="default">
+                        <i class="fas fa-circle"></i> Default
+                    </button>
+                    <button class="theme-btn" data-theme="dark">
+                        <i class="fas fa-moon"></i> Dark
+                    </button>
+                    <button class="theme-btn" data-theme="minimal">
+                        <i class="fas fa-minus"></i> Minimal
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-section">
+            <h2><i class="fas fa-chart-line"></i> Status & Info</h2>
+            <div class="status-display">
+                <div class="status-item">
+                    <span class="status-label">Status:</span>
+                    <span id="statusText" class="status-stopped">STOPPED</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Next refresh in:</span>
+                    <span id="nextRefreshTime" class="countdown">--:--</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Current tab:</span>
+                    <span id="currentTabUrl">Loading...</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Stealth mode:</span>
+                    <span id="stealthStatus" class="stealth-on">ACTIVE</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls-section">
+            <button id="startBtn" class="btn btn-start">
+                <i class="fas fa-play-circle"></i> START AUTO REFRESH
+            </button>
+            <button id="stopBtn" class="btn btn-stop" disabled>
+                <i class="fas fa-stop-circle"></i> STOP AUTO REFRESH
+            </button>
+            <button id="refreshNowBtn" class="btn btn-refresh">
+                <i class="fas fa-redo"></i> REFRESH NOW
+            </button>
+            <button id="testBtn" class="btn btn-test">
+                <i class="fas fa-vial"></i> TEST STEALTH
+            </button>
+        </div>
+        
+        <div class="stats-section">
+            <div class="stats">
+                <div class="stat">
+                    <i class="fas fa-sync-alt"></i>
+                    <span id="refreshCount">0</span>
+                    <small>Refreshes</small>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-clock"></i>
+                    <span id="timeSaved">0</span>
+                    <small>Hours Saved</small>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-user-shield"></i>
+                    <span id="stealthCount">0</span>
+                    <small>Stealth Actions</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><i class="fas fa-shield-alt"></i> 100% Undetectable • Human-like Behavior • No Bans</p>
+        </div>
+    </div>
+    
+    <div id="positionMenu" class="position-menu hidden">
+        <div class="position-option" data-position="top-right">
+            <i class="fas fa-arrow-up-right"></i> Top Right
+        </div>
+        <div class="position-option" data-position="top-left">
+            <i class="fas fa-arrow-up-left"></i> Top Left
+        </div>
+        <div class="position-option" data-position="bottom-right">
+            <i class="fas fa-arrow-down-right"></i> Bottom Right
+        </div>
+        <div class="position-option" data-position="bottom-left">
+            <i class="fas fa-arrow-down-left"></i> Bottom Left
+        </div>
+        <div class="position-option" data-position="center-right">
+            <i class="fas fa-arrow-right"></i> Center Right
+        </div>
+        <div class="position-option" data-position="center-left">
+            <i class="fas fa-arrow-left"></i> Center Left
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
