@@ -6,6 +6,10 @@ Instead of simple random reloads, it mimics real user activity such as natural t
 This makes refresh activity appear realistic and natural.
 
 ---
+## 📸 Screenshots
+
+### GUI Interface
+![GUI Screenshot](https://github.com/SkillDevloper/STEALTH-AUTO-REFRESH-PRO/blob/main/GUI_Screenshot.png?raw=true)
 
 ## ✨ Features
 
@@ -88,3 +92,4 @@ The extension is now installed ✅
 ## 📞 Support
 
 For custom modifications, branding, or feature requests, contact the developer.
+
