@@ -1,73 +1,90 @@
-STEALTH AUTO REFRESH PRO - INSTALLATION GUIDE
-=============================================
+# Stealth Auto Refresh Pro 🚀
 
-1. DOWNLOAD & EXTRACT:
-   - Download the extension files
-   - Extract to a folder named "StealthAutoRefresh"
+Stealth Auto Refresh Pro is a Chrome extension that automatically refreshes web pages using **human-like behavior simulation**.  
+Instead of simple random reloads, it mimics real user activity such as natural timing, mouse movement, and scrolling.
 
-2. CREATE ICONS:
-   - Create an "icons" folder inside the extension folder
-   - Add three PNG files: icon16.png, icon48.png, icon128.png
-   - (You can use any simple images for these)
+This makes refresh activity appear realistic and natural.
 
-3. LOAD IN CHROME:
-   - Open Chrome
-   - Go to: chrome://extensions/
-   - Enable "Developer mode" (toggle in top-right)
-   - Click "Load unpacked"
-   - Select the "StealthAutoRefresh" folder
+---
 
-4. USING THE EXTENSION:
-   - Click the extension icon in Chrome toolbar
-   - Set minimum and maximum refresh times
-   - Enable "Stealth Mode" for human-like behavior
-   - Choose user behavior pattern
-   - Click "START AUTO REFRESH"
+## ✨ Features
 
-5. FEATURES:
-   ✅ 100% Undetectable human-like refreshes
-   ✅ Live countdown timer on webpage
-   ✅ Random timing with natural patterns
-   ✅ Mouse movement & scrolling simulation
-   ✅ Multiple themes and positions
-   ✅ Stats tracking
+- ✅ Human-like auto refresh behavior  
+- ✅ Smart timing patterns (not purely random)  
+- ✅ Live countdown timer displayed on the webpage  
+- ✅ Draggable on-screen timer  
+- ✅ Multiple themes: Default, Dark, Minimal  
+- ✅ Mouse movement and scroll simulation  
+- ✅ Stats tracking (refresh count and time saved)  
+- ✅ Target URL filtering  
+- ✅ Works in background even when popup is closed  
+- ✅ Chrome Manifest V3 support  
+- ✅ No external dependencies, works fully offline  
 
-6. TROUBLESHOOTING:
-   - If timer doesn't appear: Click "SHOW TIMER" button
-   - For Chrome pages: Extension works on regular websites only
-   - To test: Go to any website (like google.com) and start
+---
 
-7. FOR FIVERR CLIENTS:
-   - This extension is ready for resale
-   - Custom branding available
-   - Source code included
-   - 100% working and tested
+## 📦 Installation Guide
 
-SUPPORT: Contact developer for custom modifications
-===================================================
+### 1️⃣ Download & Extract
+- Download the extension files  
+- Extract them into a folder named:  
+  **StealthAutoRefresh**
 
-How to Load the Extension:
-Create a folder called StealthAutoRefresh
+---
 
-Save all 9 files in this folder (with icons folder inside)
+### 2️⃣ Create Icons
+- Inside the extension folder, create a folder named:  
+  **icons**
+- Add the following PNG files:
+  - `icon16.png`
+  - `icon48.png`
+  - `icon128.png`
+- You can use any simple placeholder images
 
-Open Chrome → chrome://extensions/
+---
 
-Enable Developer Mode
+### 3️⃣ Load Extension in Chrome
+1. Open Chrome  
+2. Go to:  
+   `chrome://extensions/`
+3. Enable **Developer mode** from the top-right  
+4. Click **Load unpacked**  
+5. Select the **StealthAutoRefresh** folder  
 
-Click "Load unpacked" and select your folder
+The extension is now installed ✅
 
-Done! The extension is now installed
+---
 
-Features Summary:
-✅ 100% UNDETECTABLE - Human-like behavior simulation
-✅ Smart Timing Patterns - Not just random, but human-like
-✅ Live Countdown Timer - On-screen display
-✅ Multiple Themes - Default, Dark, Minimal
-✅ Draggable Timer - Move anywhere on screen
-✅ Stats Tracking - Counts refreshes and time saved
-✅ Target URL Filter - Only refresh specific sites
-✅ Works in Background - Continues even when popup closed
-✅ Chrome Manifest V3 - Latest standards
-✅ No External Dependencies - Works offline
+## ▶️ How to Use
 
+1. Click the extension icon from the Chrome toolbar  
+2. Set minimum and maximum refresh intervals  
+3. Enable **Stealth Mode**  
+4. Choose a user behavior pattern  
+5. Click **START AUTO REFRESH**
+
+---
+
+## 🛠 Troubleshooting
+
+- ⏱ Timer not visible:
+  - Click the **SHOW TIMER** button from the popup
+- 🌐 Chrome internal pages are not supported  
+  - Works only on regular websites
+- 🧪 For testing:
+  - Try on `google.com` or any normal website
+
+---
+
+## 💼 For Fiverr / Resale Use
+
+- Ready for resale  
+- Custom branding available  
+- Source code included  
+- Fully tested and stable  
+
+---
+
+## 📞 Support
+
+For custom modifications, branding, or feature requests, contact the developer.
